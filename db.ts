@@ -19,12 +19,12 @@ if (!cached) {
 export const connect = async () => {
   if (cached.conn) return cached.conn;
 
-  cached.promise = 
-  cached.promise ||
+  cached.promise =
+    cached.promise ||
     mongoose.connect(MONGODB_URL, {
       dbName: "clerkauthv5",
       bufferCommands: false,
-      connectTimeoutMS: 30000,
+      connectTimeoutMS: 100000,
     });
 
   cached.conn = await cached.promise;
