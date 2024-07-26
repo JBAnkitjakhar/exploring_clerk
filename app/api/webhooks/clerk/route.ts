@@ -72,7 +72,7 @@ export async function POST(req: Request) {
 
     console.log(user);
 
-    const newUser = await createUser(user);
+    // const newUser = await createUser(user);
     try {
       console.log("Attempting to create user:", user);
       const newUser = await createUser(user);
